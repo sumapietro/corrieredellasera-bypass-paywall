@@ -1,0 +1,21 @@
+{
+    "name": "CORRIERE DELLA SERA NO PAYWALL",
+    "version": "1.0",
+    "description": "easy trick to bypass the paywall of corriere della sera (corriere.it)",
+    "manifest_version": 3,
+    "action": {
+        "default_title": "easy trick to bypass the paywall of corriere della sera (corriere.it)"
+    },
+    "content_scripts": [
+        {
+            "css": [
+                "corriere.css"
+            ],
+            "matches": [
+                "https://www.corriere.it/*"
+            ],
+            "run_at": "document_idle",
+            "js":["jquery.min.js", "script.js"]
+        }
+    ]
+}
